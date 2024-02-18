@@ -1,0 +1,16 @@
+step by step:
+create the dockerfile to build an image of my development setup
+
+create a git repo that i can clone onto a machine to build my docker image
+
+write a bash script that can be run to install all the required software to build the above work
+
+write a bunch of global commands to enter my dev setup without hassle
+
+
+note:
+- learn how to use tmux
+- load into tmux directly
+- fix this damn awful bash shell
+
+
