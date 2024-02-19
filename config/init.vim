@@ -27,6 +27,17 @@ call plug#begin('/root/.config/nvim/plugins')
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' } " fuzzy search
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
+    " LSP
+    " "  Uncomment the two plugins below if you want to manage the language servers from neovim
+     Plug 'williamboman/mason.nvim'
+     Plug 'williamboman/mason-lspconfig.nvim'
+
+    " LSP Support
+    Plug 'neovim/nvim-lspconfig'
+    " Autocompletion
+
+    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+
 call plug#end()
 
 " Plugin Config
@@ -37,6 +48,10 @@ source ~/.config/nvim/plugin-config/lualine.config.lua
 source ~/.config/nvim/plugin-config/telescope.config.lua
 source ~/.config/nvim/plugin-config/autopair.config.lua
 source ~/.config/nvim/plugin-config/nvim-cmp.config.lua
+
+" LSP Config
+" -------------
+source ~/.config/nvim/plugin-config/lsp/mason.config.lua
 
 " Plugin keybinds
 source ~/.config/nvim/plugin-config/plugin-keybinds.vim
