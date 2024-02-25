@@ -12,9 +12,11 @@ call plug#begin('/root/.config/nvim/plugins')
     Plug 'nvim-tree/nvim-tree.lua'                      " Dir tree
     Plug 'nvim-lualine/lualine.nvim'                    " status line
     Plug 'windwp/nvim-autopairs'                        " pairing
+    Plug 'Pocco81/true-zen.nvim'                        " zen mode
 
     " Autocomplete
     Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
 
@@ -28,15 +30,9 @@ call plug#begin('/root/.config/nvim/plugins')
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
     " LSP
-    " "  Uncomment the two plugins below if you want to manage the language servers from neovim
-     Plug 'williamboman/mason.nvim'
-     Plug 'williamboman/mason-lspconfig.nvim'
-
-    " LSP Support
+    Plug 'williamboman/mason.nvim'
+    Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'neovim/nvim-lspconfig'
-    " Autocompletion
-
-    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 
 call plug#end()
 
@@ -51,7 +47,7 @@ source ~/.config/nvim/plugin-config/nvim-cmp.config.lua
 
 " LSP Config
 " -------------
-source ~/.config/nvim/plugin-config/lsp/mason.config.lua
+source ~/.config/nvim/plugin-config/lsp/lsp.config.lua
 
 " Plugin keybinds
 source ~/.config/nvim/plugin-config/plugin-keybinds.vim
