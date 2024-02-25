@@ -10,8 +10,8 @@ ENV LANGUAGE en_US:en
 RUN apt-get update
 
 # Install the following:
-# curl, git, tree, build-essential, fzf, ripgrep, tmux, npm, unzip, bat
-RUN apt-get install -y --fix-missing -o Debug::Acquire::http=true curl git tree build-essential fzf ripgrep tmux npm unzip bash-completion bat
+# curl, git, tree, build-essential, fzf, ripgrep, tmux, npm, unzip, bat, clang
+RUN apt-get install -y --fix-missing -o Debug::Acquire::http=true curl git tree build-essential fzf ripgrep tmux npm unzip bash-completion bat clang
 
 # Install precompiled Neovim 0.9 
 RUN curl -L https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz -o nvim-linux64.tar.gz \
