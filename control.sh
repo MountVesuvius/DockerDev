@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function ide() {
+      docker run -it -v $(pwd):/workspace fresh-nvim
+}
+
 function spin() {
     CONTAINER_NAME="$1"$(date +%d-%m-%y)
     if docker ps -a --format '{{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then

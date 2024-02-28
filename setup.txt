@@ -13,4 +13,9 @@ note:
 - load into tmux directly
 - fix this damn awful bash shell
 
+current:
+- bash script that updates the bashrc to add the idew idep commands
+- since this will be an entire env not just nvim, the global bashrc will need to auto load into this rather than selecting a project and working on it like that
 
+packages to add:
+- clang
